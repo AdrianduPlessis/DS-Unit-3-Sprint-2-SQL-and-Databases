@@ -1,4 +1,5 @@
 import sqlite3
+import pandas as pd
 
 conn = sqlite3.connect('rpg_db.sqlite3')
 cur = conn.cursor()
@@ -40,11 +41,11 @@ def question4():
 
 def question5():
     """How many Items does each character have? (Return first 20 rows)"""
+    """How many Items does each character have? (Return first 20 rows)"""
+    for id in range('''number of characters'''):
+        '''SELECT COUNT(id) FROM inventory'''
     query = "SELECT character_id FROM charactercreator_character"
     characters = cur.execute(query).fetchall()
-
-    for character in characters:
-        query_weapons = """SELECT * FROM character_inventory"""
 
 
 
@@ -69,8 +70,17 @@ def question8():
     print(result[0])
 
 
+def part2():
+    df = pd.read_csv('buddymove_holidayiq.csv')
+    # Confirm correct import
+    assert(df.shape==(249,7))
+    conn = sqlite3.connect('buddymove_holidayiq.sqlite3')
+
+
+
 question1()
 question2()
 question3()
 question4()
 question5()
+part2()

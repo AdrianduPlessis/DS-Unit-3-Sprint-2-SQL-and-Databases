@@ -16,6 +16,7 @@ def create_db(CONN):
 def insert_and_query(CONN):
     """Write and execute appropriate INSERT INTO statements to add the data"""
     curs = CONN.cursor()
+
     #TODO Make Dry
     """entries = [['g', 3, 9],
                ['v', 5, 7],
@@ -89,7 +90,14 @@ print(average_age)
 curs.close()
 curs2.close()
 
-
+#OUTPUT:
+"""
+I have 3 rows in my demo.
+I have 2 rows, where both x and y are at least 5, in my demo.
+I have 2 unique values of y, in my demo.
+[('Côte de Blaye',), ('Thüringer Rostbratwurst',), ('Mishi Kobe Niku',), ("Sir Rodney's Marmalade",), ('Carnarvon Tigers',), ('Raclette Courdavault',), ('Manjimup Dried Apples',), ('Tarte au sucre',), ('Ipoh Coffee',), ('Rössle Sauerkraut',)]
+37.22222222222222
+"""
 
 
 

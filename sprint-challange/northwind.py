@@ -31,3 +31,9 @@ query = f"""SELECT CategoryName
 most_popular_category = curs.execute(query).fetchall()[0][0]
 
 print('The most popular product category is', most_popular_category)
+
+#OUTPUT:
+"""
+[('Geitost', 'Norske Meierier'), ('Guaraná Fantástica', 'Refrescos Americanas LTDA'), ('Konbu', "Mayumi's"), ('Filo Mix', "G'day, Mate"), ('Tourtière', 'Ma Maison'), ('Rhönbräu Klosterbier', 'Plutzer Lebensmittelgroßmärkte AG'), ('Tunnbröd', 'PB Knäckebröd AB'), ('Teatime Chocolate Biscuits', 'Specialty Biscuits, Ltd.'), ('Rogede sild', 'Lyngbysild'), ('Zaanse koeken', 'Zaanse Snoepfabriek')]
+The most popular product category is Confections
+"""
